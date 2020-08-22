@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@reduxjs/toolkit": "^1.4.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -74,7 +76,8 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -152,5 +155,25 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@types/babel__core": "7.1.9",
+    "@types/case-sensitive-paths-webpack-plugin": "2.1.4",
+    "@types/eslint": "^6.8.1",
+    "@types/file-loader": "4.2.0",
+    "@types/fs-extra": "^8.1.1",
+    "@types/mini-css-extract-plugin": "0.9.0",
+    "@types/optimize-css-assets-webpack-plugin": "5.0.1",
+    "@types/react-dev-utils": "^9.0.4",
+    "@types/resolve": "1.17.1",
+    "@types/semver": "7.3.3",
+    "@types/terser-webpack-plugin": "4.1.0",
+    "@types/testing-library__jest-dom": "^5.9.2",
+    "@types/testing-library__react": "^10.2.0",
+    "@types/webpack": "4.41.21",
+    "@types/webpack-dev-server": "3.11.0",
+    "@types/webpack-manifest-plugin": "2.1.0",
+    "@types/workbox-webpack-plugin": "5.1.4",
+    "@types/yup": "^0.29.6"
   }
 }

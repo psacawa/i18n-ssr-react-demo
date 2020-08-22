@@ -19,6 +19,6 @@ export const todoReducer = createReducer<TodoState>([], builder =>
     })
 );
 
-export default combineReducers ({
-  todos: todoReducer,
-})
+export default combineReducers({
+  todos: todoReducer
+});

@@ -1,13 +1,26 @@
 import React from "react";
-import TodoList from "./components/TodoList";
-import TodoForm from "components/TodoForm";
 import TodoView from "components/TodoView";
+import { Paper, makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    width: "80%",
+    margin: "auto",
+    textAlign: "center",
+    padding: "10px",
+    backgroundColor: "#ccc",
+    borderWidth: "200px",
+    borderColor: 'blue',
+  }
+});
 
 function App() {
+  const classes = useStyles();
   return (
     <>
-      <TodoView />
-      <TodoForm />
+      <Paper className={classes.root}>
+        <TodoView />
+      </Paper>
     </>
   );
 }

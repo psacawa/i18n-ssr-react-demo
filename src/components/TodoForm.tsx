@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { Formik, Field, Form, FormikProps, FormikHelpers } from "formik";
 import * as yup from "yup";
 import { addTodo } from "store/actions";
+import { TextField } from "formik-material-ui";
+import { Button } from "@material-ui/core";
 
 type Values = { text: string };
 
@@ -24,8 +26,8 @@ export default () => {
       >
         {(props: FormikProps<Values>) => (
           <Form>
-            <Field name="text" />
-            <input type="submit" value="Add Todo" name="" id="" />
+            <Field component={TextField} name="text" />
+            <Button type="submit">Submit</Button>
           </Form>
         )}
       </Formik>

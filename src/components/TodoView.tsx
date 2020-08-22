@@ -1,35 +1,35 @@
 import React, { Component } from "react";
 import TodoList from "./TodoList";
 import { TodoStage } from "../types";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { Clear, PlayArrow, Done } from "@material-ui/icons";
 import { startTodo, finishTodo, removeTodo } from "store/actions";
+import TodoForm from "./TodoForm";
 
 export default () => (
   <>
-    <h2>Todos</h2>
+    <Typography variant="h3">Manage your todos!</Typography>
     <Grid container spacing={3}>
-      <Grid item>
+      <Grid item xs={4}>
         <TodoList
           filter={TodoStage.Todo}
+          title="Todo"
           action={startTodo}
-          ActionIcon={PlayArrow}
+          icon={PlayArrow}
         />
       </Grid>
-      <Grid item>
+      <Grid item xs={4}>
         <TodoList
           filter={TodoStage.Doing}
+          title="Doing"
           action={finishTodo}
-          ActionIcon={Done}
+          icon={Done}
         />
       </Grid>
-      <Grid item>
-        <TodoList
-          filter={TodoStage.Done}
-          action={removeTodo}
-          ActionIcon={Clear}
-        />
+      <Grid item xs={4}>
+        <TodoList filter={TodoStage.Done} title="Done" action={removeTodo} icon={Clear} />
       </Grid>
     </Grid>
+    <TodoForm />
   </>
 );
